@@ -1,0 +1,17 @@
+CHange top pf tex to 
+\documentclass[modern]{aastex62}
+
+copy in aastex file 
+
+need to remove docref and upstream location - or add macros 
+
+\abstract not DocAbstract
+
+remove authors put
+\input{authors}
+
+
+Create authors.yaml -- see readme in lsst-temf
+
+run (fix path to you db2authors.py
+python3 /Users/womullan/LSSTgit/lsst-texmf/bin/db2authors.py > authors.tex

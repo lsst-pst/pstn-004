@@ -19,6 +19,9 @@ $(DOCNAME).pdf: $(tex) meta.tex local.bib
 acronyms.tex: $(tex) myacronyms.txt
 	$(TEXMFHOME)/../bin/generateAcronyms.py $(tex)
 
+authors.tex:  authors.yaml 
+	db2authors.py authors.yaml >> authors.tex
+
 .PHONY: clean
 clean:
 	latexmk -c

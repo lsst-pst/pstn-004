@@ -1,59 +1,28 @@
-\documentclass[PST,authoryear,toc]{lsstdoc}
+
+\documentclass[modern]{aastex62}
+%linenumbers
+
+
+% Add your own macros here:
 % lsstdoc documentation: https://lsst-texmf.lsst.io/lsstdoc.html
-
-\input{meta}
-
-% Package imports go here.
-
-% Local commands go here.
-
-% To add a short-form title:
-% \title[Short title]{Title}
-\title{LSST Observatory System Operations Readiness Report}
-
-% Optional subtitle
-% \setDocSubtitle{A subtitle}
-
-\author{%
-Jonathan Sick
-}
-
-\setDocRef{PSTN-004}
-\setDocUpstreamLocation{\url{https://github.com/lsst-pst/pstn-004}}
-
-\date{\vcsDate}
-
-% Optional: name of the document's curator
-% \setDocCurator{The Curator of this Document}
-
-\setDocAbstract{%
-Commissioning domain paper on readiness.
-}
-
-% Change history defined here.
-% Order: oldest first.
-% Fields: VERSION, DATE, DESCRIPTION, OWNER NAME.
-% See LPM-51 for version number policy.
-\setDocChangeRecord{%
-  \addtohist{1}{YYYY-MM-DD}{Unreleased.}{Jonathan Sick}
-}
 
 \begin{document}
 
+\input{authors}
+\date{\today}
+\input{abstract}
+
 % Create the title page.
-\maketitle
+\title{The demise of the filesystem and multi level service  architecture}
+ \hypersetup{pdftitle={\@title}, pdfauthor={\@author}, pdfkeywords={\@keywords}}
 
-% ADD CONTENT HERE
-% You can also use the \input command to include several content files.
+\input{body}
 
-\appendix
 % Include all the relevant bib files.
 % https://lsst-texmf.lsst.io/lsstdoc.html#bibliographies
-\section{References} \label{sec:bib}
+\bibliographystyle{yahapj}
 \bibliography{local,lsst,lsst-dm,refs_ads,refs,books}
 
-% Make sure lsst-texmf/bin/generateAcronyms.py is in your path
-\section{Acronyms} \label{sec:acronyms}
-\input{acronyms.tex}
-
+%Make sure lsst-texmf/bin/generateAcronyms.py is in your path
+\input{acronyms}
 \end{document}
