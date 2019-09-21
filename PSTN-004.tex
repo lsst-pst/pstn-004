@@ -6,6 +6,10 @@
 % Add your own macros here:
 % lsstdoc documentation: https://lsst-texmf.lsst.io/lsstdoc.html
 
+\usepackage[colorinlistoftodos]{todonotes}
+\newcommand{\LPG}[2][]{\todo[color=teal!30, #1]{LPG: #2}}
+
+
 \begin{document}
 
 \input{authors}
@@ -27,3 +31,4 @@
 %Make sure lsst-texmf/bin/generateAcronyms.py is in your path
 \input{acronyms}
 \end{document}
+`
